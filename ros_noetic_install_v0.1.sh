@@ -24,9 +24,19 @@ source /opt/ros/noetic/setup.bash;
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc;
 source ~/.bashrc;
 
-# 1.4 Dependency install
+# 1.4 Workspace setup
+mkdir -p ~/catkin_ws/src;
+cd ~/catkin_ws;
+catkin_make;
+source ~/catkin_ws/devel/setup.bash;
+echo "souree ~/catkin_ws/devel/setup.bash" >> ~/.bashrc;
+source ~/.bashrc;
+
+# 1.5 Dependency install
 sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential -y
 
-# 1.5 Initialize rosdep
+# 1.6 Initialize rosdep
 sudo rosdep init
 rosdep update
+
+exit
