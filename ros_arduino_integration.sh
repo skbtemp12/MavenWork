@@ -16,7 +16,7 @@ catkin_make;
 catkin_make install;
 
 # Install ros_lib into the Arduino Environment 
-cd ~/Arduino/libraries/ # For arduino 1.8.6
+cd ~/Arduino/libraries/ # For arduino 1.8.16
 rm -rf ros_lib
 rosrun rosserial_arduino make_libraries.py .
 
