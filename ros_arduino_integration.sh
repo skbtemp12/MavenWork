@@ -15,12 +15,12 @@ cd .. # now we're inside ~/catkin_ws/
 catkin_make;
 catkin_make install;
 
-# Install ros_lib into the Arduino Environment 
+# 1.3 Install ros_lib into the Arduino Environment 
 cd ~/Arduino/libraries/ # For arduino 1.8.16
 rm -rf ros_lib
 rosrun rosserial_arduino make_libraries.py .
 
-# Giving the port ACM0 read, write, executable power
+# 1.4 Giving the port ACM0 read, write, executable power
 sudo usermod -a -G dialout $USER
 sudo chmod 777 /dev/ttyACM0
 
